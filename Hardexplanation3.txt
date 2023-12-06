@@ -1,0 +1,38 @@
+Hard-3:
+
+Given an integer n, count the total number of digit 1 appearing in all non-negative integers less than or equal to n.
+
+Logic:
+
+1.Initialization:
+
+Initialize a variable count to 0. This variable will be used to accumulate the count of digit '1' in the numbers.
+
+2.Iteration:
+
+Use a for loop to iterate through numbers from 1 to n (inclusive). The loop variable i represents the current number being processed.
+
+3.Counting:
+
+Convert the current number i to a string using str(i).
+Use the count method on the string to count the occurrences of the digit '1'.
+Add the count to the overall count variable.
+
+4.Result:
+
+The function returns the final count, which represents the total occurrences of the digit '1' in all numbers from 1 to n.
+
+
+Algorithm:
+
+Algorithm: count_digit_one(n)
+Input: A positive integer n
+
+Output: The count of occurrences of the digit '1' in numbers from 1 to n (inclusive)
+
+1. Initialize a variable count to 0.
+2. Iterate through numbers from 1 to n (inclusive) using a for loop with loop variable i:
+   a. Convert i to a string.
+   b. Count the occurrences of '1' in the string representation of i.
+   c. Add the count to the overall count variable.
+3. Return the final count as the result.

@@ -1,0 +1,51 @@
+
+Easy 1
+Given a string s consisting of words and spaces, return the length of the last word in the string.
+A word is a maximal 
+substring consisting of non-space characters only.
+
+
+explanation
+
+
+step-1:Input Parameter:
+
+The function takes a string s as input.
+Splitting the String:
+
+The split method is used to split the input string s into a list of words. By default, it splits the string at spaces.
+python
+
+step-2:Check for Empty String:
+
+The function then checks if there are any words in the list. If the list is empty, it means there are no words in the input string, and the function returns 0.
+
+Return Length of Last Word:
+
+step-3:If there are words in the list, the function returns the length of the last word in the list.
+python
+
+Here, words[-1] accesses the last element of the list (which is the last word), and len(words[-1]) gives the length of that word.
+
+step-4:User Input and Function Call:
+
+The user is prompted to enter a string (s), and then the function is called with this input.
+
+
+
+algorithm:
+
+step-1:Input: Accept a string s as input.
+
+step-2:Split the String:
+
+Use the split method to split the input string into a list of words. This can be done using words = s.split().
+
+step-3:Check for Empty String:
+
+If the resulting list of words (words) is empty, return 0, as there are no words in the input string.
+
+step-4:Return Length of Last Word:
+
+If there are words in the list, return the length of the last word. Access the last element of the list using len(words[-1]).
+

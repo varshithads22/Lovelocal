@@ -1,0 +1,49 @@
+Medium 2 
+
+Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times.
+
+explanation:
+
+Logic:
+
+1.The function aims to find elements in an integer array that appear more than ⌊ n/3 ⌋ times. The algorithm uses a modified version of Boyer-Moore Majority Vote algorithm to find potential candidates.
+
+2.First Pass: Finding Potential Candidates
+
+The algorithm iterates through the array, keeping track of two potential candidates (candidate1 and candidate2) and their counts (count1 and count2).
+If the current number is equal to one of the candidates, its count is incremented. If the count is zero, a new candidate is assigned.
+If the current number is different from both candidates and both counts are non-zero, decrement both counts.
+This pass identifies potential candidates that might have counts greater than ⌊ n/3 ⌋.
+
+3.Second Pass: Checking Counts
+
+The algorithm resets the counts and iterates through the array again, counting the occurrences of the potential candidates (candidate1 and candidate2).
+If the count of a candidate is greater than ⌊ n/3 ⌋, it is added to the result list.
+
+4.Result:
+
+The function returns a list of elements that appear more than ⌊ n/3 ⌋ times in the input array.
+
+
+Algorithm:
+
+Algorithm: majority_elements(nums)
+Input: An integer array nums of size n
+
+Output: A list containing elements that appear more than ⌊ n/3 ⌋ times
+
+1. Initialize candidate1, count1, candidate2, and count2 to None and 0 respectively.
+2. Iterate through the array nums to find potential candidates:
+   a. If candidate1 is equal to the current number, increment count1.
+   b. If candidate2 is equal to the current number, increment count2.
+   c. If count1 is 0, set candidate1 to the current number and count1 to 1.
+   d. If count2 is 0, set candidate2 to the current number and count2 to 1.
+   e. If none of the above conditions are met, decrement both count1 and count2.
+3. Reset count1 and count2 to 0.
+4. Iterate through the array nums again:
+   a. If the current number is equal to candidate1, increment count1.
+   b. If the current number is equal to candidate2, increment count2.
+5. Initialize an empty list result.
+6. If count1 is greater than ⌊ n/3 ⌋, add candidate1 to the result.
+7. If count2 is greater than ⌊ n/3 ⌋, add candidate2 to the result.
+8. Return the result list containing elements that appear more than ⌊ n/3 ⌋ times.
